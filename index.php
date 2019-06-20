@@ -1,35 +1,9 @@
 <?php
-require('jobs.php');
+include('jobs.php');
 
 $name = 'Manue Elizondo';
 
 
-$limitMonths = 122;
-function getDuration($months){
-$years = floor($months / 12);
-$months %=12;
-return "$years years $months months";
-}
-
-function printJobs($job)
-{
-  if ($job['visible']==false){
-    return;
-  }
-
-  echo '<li class="work-position">';
-  echo '<h5>'. $job['title'].'</h5>';
-  echo '<p>'.$job['descripcion'].'</p>';
-  echo '<p>'.getDuration($job['months']).'</p>';
-  echo '<strong>Achievements:</strong>';
-  echo '<ul>';
-  echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-  echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-  echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-  echo '</ul>';
-  echo '</li>';
-
-}
 
 ?>
 
@@ -83,7 +57,7 @@ function printJobs($job)
             <?php
             $totalMonths = 0;
               for($idx = 0; $idx < count($jobs);$idx++){
-                $totalMonths += $jobs[$idx]['months'];
+                $totalMonths += $jobs[$idx]->months;
 
                 if ($totalMonths > $limitMonths){
                   break;

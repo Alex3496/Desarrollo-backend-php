@@ -1,0 +1,3 @@
+Trabajar en la carpeta /opt/lampp/htdocs/pl 
+para despues pasaralo a la crapeta con el git que esta en la 
+de Documentos
