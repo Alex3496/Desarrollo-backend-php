@@ -62,19 +62,23 @@ $name = 'Manue Elizondo';
                 if ($totalMonths > $limitMonths){
                   break;
                 }
-                /*
-                if ($jobs[$idx]['visible']==false)
-                {
-                  continue; //se salta a la siguinte iteracion
-                }*/
                 
-                printJobs($jobs[$idx]);
+                printElement($jobs[$idx]);
               }
             ?>
           </ul>
         </div>
         <div>
             <h3 class="border-bottom-gray">Projects</h3>
+            <ul>
+            <?php
+              for($idx = 0; $idx < count($proyects);$idx++){
+                
+                printElement($proyects[$idx]);
+              }
+            ?>
+          </ul>
+
             <div class="project">
                 <h5>Project X</h5>
                 <div class="row">
